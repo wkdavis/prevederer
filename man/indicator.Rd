@@ -2,13 +2,13 @@
 % Please edit documentation in R/indicator.R
 \name{indicator}
 \alias{indicator}
-\alias{Prevedere.api.indicator}
-\alias{Prevedere.api.indicator_series}
+\alias{prevedere.api.indicator}
+\alias{prevedere.api.indicator_series}
 \title{Indicators}
 \usage{
-Prevedere.api.indicator(provider, provider_id)
+prevedere.api.indicator(provider, provider_id)
 
-Prevedere.api.indicator_series(provider, provider_id, freq = c("Annual",
+prevedere.api.indicator_series(provider, provider_id, freq = c("Annual",
   "SemiAnnual", "Quarterly", "Monthly", "BiWeekly", "Weekly", "Daily"),
   calculation = c("None", "PeriodOverPeriod", "YearOverYear",
   "ThreePeriodMoving", "FivePeriodMoving", "ThreePeriodYearOverYear"),
@@ -39,8 +39,8 @@ in that direction.}
 (typically nested lists) or formatted as appropriate, usually a dataframe.}
 }
 \value{
-A list. Prevedere.api.indicator returns metadata for
-the target indicator, while Prevedere.api.indicator_series returns the actual
+A list. prevedere.api.indicator returns metadata for
+the target indicator, while prevedere.api.indicator_series returns the actual
 data for the indicator (in addition to the metadata).
 }
 \description{
@@ -50,15 +50,15 @@ Access indicator data and metadata.
 \dontrun{
 
 ## Return indicator metadata
-Prevedere.api.indicator(provider = "BLS", provider_id = "CES3133231058")
+prevedere.api.indicator(provider = "BLS", provider_id = "CES3133231058")
 
 ## Return indicator data
-Prevedere.api.indicator_series(provider = "BLS", provider_id = "CES3133231058",
+prevedere.api.indicator_series(provider = "BLS", provider_id = "CES3133231058",
 freq = "Monthly", calculation = "None", start_date = "2010-01-01",
 offset_periods = 0)
 
 ## Return indicator data unformatted
-Prevedere.api.indicator_series(provider = "BLS", provider_id = "CES3133231058",
+prevedere.api.indicator_series(provider = "BLS", provider_id = "CES3133231058",
 freq = "Monthly", calculation = "None", start_date = "2010-01-01",
 offset_periods = 0,raw = TRUE)
 }

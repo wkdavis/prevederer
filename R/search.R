@@ -5,11 +5,11 @@
 #' @param query A query to send to Prevedere. This should be a named list.
 #'
 #' @return The result of the search.
-#' @seealso [Prevedere.api.fetch]
+#' @seealso [prevedere.api.fetch]
 #' @export
-Prevedere.api.search <- function(query) {
+prevedere.api.search <- function(query) {
   path <- "/search"
   payload <- query
 
-  Prevedere.api.fetch(path,payload)
+  prevedere.api.fetch(path,payload)
 }

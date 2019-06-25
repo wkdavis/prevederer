@@ -2,18 +2,18 @@
 #'
 #' Retrieve a list of entities whose data is available in Prevedere
 #'
-#' @inheritParams Prevedere.api.indicator_series
+#' @inheritParams prevedere.api.indicator_series
 #'
 #' @return A dataframe (or list if \code{raw = TRUE}) of provider metadata.
 #' @export
 #'
 #' @examples
 #' \dontrun{
-#' Prevedere.api.providers()
+#' prevedere.api.providers()
 #' }
-Prevedere.api.providers <- function(raw = FALSE) {
+prevedere.api.providers <- function(raw = FALSE) {
   path <- "/provider"
-  p <- Prevedere.api.fetch(path)
+  p <- prevedere.api.fetch(path)
 
   if(raw) return(p)
 

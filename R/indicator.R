@@ -18,23 +18,23 @@
 #' @param raw Logical value indicating if data should be returned in its raw form
 #' (typically nested lists) or formatted as appropriate, usually a dataframe.
 #'
-#' @return A list. Prevedere.api.indicator returns metadata for
-#' the target indicator, while Prevedere.api.indicator_series returns the actual
+#' @return A list. prevedere.api.indicator returns metadata for
+#' the target indicator, while prevedere.api.indicator_series returns the actual
 #' data for the indicator (in addition to the metadata).
 #'
 #' @examples
 #' \dontrun{
 #'
 #' ## Return indicator metadata
-#' Prevedere.api.indicator(provider = "BLS", provider_id = "CES3133231058")
+#' prevedere.api.indicator(provider = "BLS", provider_id = "CES3133231058")
 #'
 #' ## Return indicator data
-#' Prevedere.api.indicator_series(provider = "BLS", provider_id = "CES3133231058",
+#' prevedere.api.indicator_series(provider = "BLS", provider_id = "CES3133231058",
 #' freq = "Monthly", calculation = "None", start_date = "2010-01-01",
 #' offset_periods = 0)
 #'
 #' ## Return indicator data unformatted
-#' Prevedere.api.indicator_series(provider = "BLS", provider_id = "CES3133231058",
+#' prevedere.api.indicator_series(provider = "BLS", provider_id = "CES3133231058",
 #' freq = "Monthly", calculation = "None", start_date = "2010-01-01",
 #' offset_periods = 0,raw = TRUE)
 #' }
@@ -44,14 +44,14 @@ NULL
 
 #' @rdname indicator
 #' @export
-Prevedere.api.indicator <- function(provider,provider_id) {
+prevedere.api.indicator <- function(provider,provider_id) {
   path <- paste("/indicator",provider,provider_id,sep = "/")
-  Prevedere.api.fetch(path)
+  prevedere.api.fetch(path)
 }
 
 #' @rdname indicator
 #' @export
-Prevedere.api.indicator_series <- function(provider,
+prevedere.api.indicator_series <- function(provider,
                                            provider_id,
                                            freq = c("Annual","SemiAnnual","Quarterly","Monthly","BiWeekly","Weekly","Daily"),
                                            calculation = c("None","PeriodOverPeriod","YearOverYear","ThreePeriodMoving","FivePeriodMoving","ThreePeriodYearOverYear"),
@@ -77,7 +77,7 @@ Prevedere.api.indicator_series <- function(provider,
 
   path <- paste("/indicator","series",provider,provider_id,sep = "/")
 
-  d <- Prevedere.api.fetch(path,payload = list(Frequency = freq,
+  d <- prevedere.api.fetch(path,payload = list(Frequency = freq,
                                                Offset = offset_periods,
                                                Calculation = calculation,
                                                StartDate = start_date,

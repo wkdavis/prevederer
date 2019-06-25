@@ -29,6 +29,6 @@ api_key = "xyz123"
 provider = "provider_a"
 provider_id = "a123"
 
-Prevedere.api.set_key(api_key)
-Prevedere.api.indicator_series(provider, provider_id)
+prevedere.api.set_key(api_key)
+prevedere.api.indicator_series(provider, provider_id)
 ```

@@ -2,13 +2,13 @@
 % Please edit documentation in R/key.R
 \name{key}
 \alias{key}
-\alias{Prevedere.api.set_key}
-\alias{Prevedere.api.get_key}
+\alias{prevedere.api.set_key}
+\alias{prevedere.api.get_key}
 \title{Set Prevedere API key}
 \usage{
-Prevedere.api.set_key(key, overwrite = TRUE)
+prevedere.api.set_key(key, overwrite = TRUE)
 
-Prevedere.api.get_key()
+prevedere.api.get_key()
 }
 \arguments{
 \item{key}{A Prevedere API key.}
@@ -17,29 +17,29 @@ Prevedere.api.get_key()
 }
 \value{
 The current API key as set in \link{options}. In the case of
-\link{Prevedere.api.set_key}, the API key is returned invisibly.
+\link{prevedere.api.set_key}, the API key is returned invisibly.
 }
 \description{
 Set the Prevedere API key to be used. This key can be obtained by contacting
-Prevedere. The key is stored in an \R option named "Prevedere.api.key".
+Prevedere. The key is stored in an \R option named "prevedere.api.key".
 }
 \examples{
-Prevedere.api.set_key("abcdefghijkl")
-Prevedere.api.get_key()
+prevedere.api.set_key("abcdefghijkl")
+prevedere.api.get_key()
 
 ## the API key can also be accessed directly via options
-options(Prevedere.api.key = "mnopqrstuv")
-getOption("Prevedere.api.key")
+options(prevedere.api.key = "mnopqrstuv")
+getOption("prevedere.api.key")
 
 \dontrun{
-## attempting to get the Prevedere.api.key when it hasn't been set will
+## attempting to get the prevedere.api.key when it hasn't been set will
 ## result in a warning.
-options(Prevedere.api.key = NULL)
-Prevedere.api.get_key()
+options(prevedere.api.key = NULL)
+prevedere.api.get_key()
 
 ## setting the API key when the option is already set will also result in
 ## a warning
-Prevedere.api.set_key("abcdefghijkl")
-Prevedere.api.set_key("mnopqrstuv")
+prevedere.api.set_key("abcdefghijkl")
+prevedere.api.set_key("mnopqrstuv")
 }
 }

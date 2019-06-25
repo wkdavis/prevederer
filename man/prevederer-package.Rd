@@ -17,10 +17,10 @@ access to the main API components, including:
 \item Workbenches
 }
 
-Direct calls can also be made to the API using \link{Prevedere.api.fetch}.
+Direct calls can also be made to the API using \link{prevedere.api.fetch}.
 
 \strong{Note that access to the API requires an API key}. The API key is set in
-\link{options} using the convenience function \link{Prevedere.api.set_key}.
+\link{options} using the convenience function \link{prevedere.api.set_key}.
 }
 \seealso{
 Useful links:

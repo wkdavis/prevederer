@@ -10,9 +10,9 @@
 #'
 #' @examples
 #' \dontrun{
-#' Prevedere.api.workbench("b8da829f7a1d4509ca5125e4699d6f0e")
+#' prevedere.api.workbench("b8da829f7a1d4509ca5125e4699d6f0e")
 #' }
-Prevedere.api.workbench <- function(workbench_id) {
+prevedere.api.workbench <- function(workbench_id) {
   path <- paste("/workbench",workbench_id,sep = "/")
-  Prevedere.api.fetch(path)
+  prevedere.api.fetch(path)
 }

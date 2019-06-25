@@ -8,21 +8,21 @@
 #' @param payload The payload for the request. This should be a named list.
 #'
 #' @return The result of the API request.
-#' @seealso [Prevedere.api.search], [GET][httr::GET], [content][httr:content], [response][httr::response]
+#' @seealso [prevedere.api.search], [GET][httr::GET], [content][httr:content], [response][httr::response]
 #' @importFrom httr parse_url build_url GET stop_for_status content
 #' @export
 #'
 #' @examples
 #' \dontrun{
-#' Prevedere.api.fetch(path = "/indicator/BLS/CES3133231058",
+#' prevedere.api.fetch(path = "/indicator/BLS/CES3133231058",
 #'                     payload = list(Frequency = "Annual",
 #'                                    Calculation = "None",
 #'                                    Offset = 0))
 #' }
-Prevedere.api.fetch <- function(path,payload = NULL) {
+prevedere.api.fetch <- function(path,payload = NULL) {
 
-  if(is.null(Prevedere.api.get_key()))
-    stop("No API key has been set. Please obtain an API key and set it using `Prevedere.api.set_key()`.")
+  if(is.null(prevedere.api.get_key()))
+    stop("No API key has been set. Please obtain an API key and set it using `prevedere.api.set_key()`.")
 
   url <- httr::parse_url("https://api.prevedere.com")
 
@@ -30,7 +30,7 @@ Prevedere.api.fetch <- function(path,payload = NULL) {
 
   if(is.null(payload)) payload <- list()
 
-  payload["ApiKey"] <- Prevedere.api.get_key()
+  payload["ApiKey"] <- prevedere.api.get_key()
 
   url$query <- I(payload)
 
