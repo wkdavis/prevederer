@@ -9,7 +9,7 @@
 #' @return The current API key as set in [options]. In the case of
 #' [Prevedere.api.set_key], the API key is returned invisibly.
 #'
-#' @name api-key
+#' @name key
 #' @examples
 #' Prevedere.api.set_key("abcdefghijkl")
 #' Prevedere.api.get_key()
@@ -31,7 +31,7 @@
 #' }
 NULL
 
-#' @rdname api-key
+#' @rdname key
 #' @export
 Prevedere.api.set_key <- function(key,overwrite = TRUE) {
 
@@ -51,7 +51,7 @@ Prevedere.api.set_key <- function(key,overwrite = TRUE) {
 
 }
 
-#' @rdname api-key
+#' @rdname key
 #' @export
 Prevedere.api.get_key <- function() {
 

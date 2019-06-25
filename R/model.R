@@ -1,6 +1,7 @@
-#' Prevedere correlation
+#' Correlation
 #'
-#' Use Prevedere to correlate two economic indicators over multiple lag times.
+#' Calculates Pearson's r and other statistics at different offsets between an
+#' endogenous and exogenous indicator.
 #'
 #' @param endog_provider Code for the data provider of the endogenous indicator,
 #' can be hexidecimal or abbreviated name.
@@ -10,7 +11,7 @@
 #' @param exog_provider_id Specific ProviderID for the exogenous indicator.
 #' @inheritParams Prevedere.api.indicator_series
 #'
-#' @return A list of the model results and metadata.
+#' @return Model results and metadata, as a list.
 #' @export
 #'
 #' @examples
@@ -19,8 +20,6 @@
 #' exog_provider = "FRED", exog_provider_id = "PCU332313332313", freq = "Monthly",
 #' calculation = "ThreePeriodMoving")
 #' }
-#'
-Prevedere.api.correlation(endog_provider = "BLS", endog_provider_id = "CES3133231058",exog_provider = "FRED", exog_provider_id = "PCU332313332313", freq = "Monthly",calculation = "ThreePeriodMoving")
 Prevedere.api.correlation <- function(endog_provider,
                                       endog_provider_id,
                                       exog_provider,
@@ -61,17 +60,26 @@ Prevedere.api.correlation <- function(endog_provider,
   fit
 }
 
-#' Title
+#' Raw model
 #'
-#' @param model_id
-#' @param exclude_indicators
-#' @param as_of_date
-#' @param raw
+#' Returns all information about a forecast model.
 #'
-#' @return
+#' @param model_id UUID for the forecast model.
+#' @param exclude_indicators Whether to return only indicators used in model, or all associated indicators.
+#' @param as_of_date Get the model only using data up to the specified date (YYYY-MM-DD). Used for backtesting.
+#' @inheritParams Prevedere.api.indicator_series
+#'
+#' @return A list of model components and metadata, including indicators,
+#' coefficients, and the model start date.
 #' @export
 #'
 #' @examples
+#' \dontrun{
+#' Prevedere.api.raw_model(model_id = "1b1878399833c7f38b094e54dd43d374")
+#'
+#' ## Backtest
+#' Prevedere.api.raw_model(model_id = "1b1878399833c7f38b094e54dd43d374",as_of_data = "2019-05-01")
+#' }
 Prevedere.api.raw_model <- function(model_id,exclude_indicators = TRUE,as_of_date = NULL,raw = FALSE) {
 
   if(!is.logical(exclude_indicators)) stop("'exclude_indicators' must be logical.")
@@ -122,16 +130,19 @@ Prevedere.api.raw_model <- function(model_id,exclude_indicators = TRUE,as_of_dat
 
 }
 
-#' Title
+#' Forecast
 #'
-#' @param model_id
-#' @param as_of_date
-#' @param raw
+#' Returns historical fit and forecasted values of a forecast model.
 #'
-#' @return
+#' @inheritParams Prevedere.api.raw_model
+#'
+#' @return A dataframe of forecasted values and metadata.
 #' @export
 #'
 #' @examples
+#' \dontrun{
+#' Prevedere.api.forecast(model_id = "1b1878399833c7f38b094e54dd43d374")
+#' }
 Prevedere.api.forecast <- function(model_id,as_of_date = NULL, raw = FALSE) {
 
   if(!is.null(as_of_date)) {
