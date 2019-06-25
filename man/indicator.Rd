@@ -4,7 +4,7 @@
 \alias{indicator}
 \alias{Prevedere.api.indicator}
 \alias{Prevedere.api.indicator_series}
-\title{Access Prevedere indicators}
+\title{Indicators}
 \usage{
 Prevedere.api.indicator(provider, provider_id)
 
@@ -36,7 +36,7 @@ in that direction.}
 \item{offset_periods}{Number of periods to offset.}
 
 \item{raw}{Logical value indicating if data should be returned in its raw form
-(typically nested lists) or formatted as appropriate, usually to a dataframe.}
+(typically nested lists) or formatted as appropriate, usually a dataframe.}
 }
 \value{
 A list. Prevedere.api.indicator returns metadata for

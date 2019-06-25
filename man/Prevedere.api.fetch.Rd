@@ -28,5 +28,5 @@ Prevedere.api.fetch(path = "/indicator/BLS/CES3133231058",
 }
 }
 \seealso{
-[Prevedere.api.search], [GET][httr::GET], [content][httr:content], [response][httr::response]
+\link{Prevedere.api.search}, \link[httr:GET]{GET}, \link[=httr:content]{content}, \link[httr:response]{response}
 }

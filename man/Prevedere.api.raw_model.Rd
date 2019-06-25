@@ -2,14 +2,33 @@
 % Please edit documentation in R/model.R
 \name{Prevedere.api.raw_model}
 \alias{Prevedere.api.raw_model}
-\title{Title}
+\title{Raw model}
 \usage{
 Prevedere.api.raw_model(model_id, exclude_indicators = TRUE,
   as_of_date = NULL, raw = FALSE)
 }
 \arguments{
-\item{raw}{}
+\item{model_id}{UUID for the forecast model.}
+
+\item{exclude_indicators}{Whether to return only indicators used in model, or all associated indicators.}
+
+\item{as_of_date}{Get the model only using data up to the specified date (YYYY-MM-DD). Used for backtesting.}
+
+\item{raw}{Logical value indicating if data should be returned in its raw form
+(typically nested lists) or formatted as appropriate, usually a dataframe.}
+}
+\value{
+A list of model components and metadata, including indicators,
+coefficients, and the model start date.
 }
 \description{
-Title
+Returns all information about a forecast model.
+}
+\examples{
+\dontrun{
+Prevedere.api.raw_model(model_id = "1b1878399833c7f38b094e54dd43d374")
+
+## Backtest
+Prevedere.api.raw_model(model_id = "1b1878399833c7f38b094e54dd43d374",as_of_data = "2019-05-01")
+}
 }

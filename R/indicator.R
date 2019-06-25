@@ -1,4 +1,4 @@
-#' Access Prevedere indicators
+#' Indicators
 #'
 #' Access indicator data and metadata.
 #'
@@ -16,7 +16,7 @@
 #' in that direction.
 #' @param offset_periods Number of periods to offset.
 #' @param raw Logical value indicating if data should be returned in its raw form
-#' (typically nested lists) or formatted as appropriate, usually to a dataframe.
+#' (typically nested lists) or formatted as appropriate, usually a dataframe.
 #'
 #' @return A list. Prevedere.api.indicator returns metadata for
 #' the target indicator, while Prevedere.api.indicator_series returns the actual

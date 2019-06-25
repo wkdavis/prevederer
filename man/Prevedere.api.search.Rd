@@ -16,5 +16,5 @@ The result of the search.
 Send an arbitrary query to the Prevedere API.
 }
 \seealso{
-[Prevedere.api.fetch]
+\link{Prevedere.api.fetch}
 }
