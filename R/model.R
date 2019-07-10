@@ -9,18 +9,20 @@
 #' @param exog_provider Code for the data provider of the exogneous indicator,
 #' can be hexidecimal or abbreviated name.
 #' @param exog_provider_id Specific ProviderID for the exogenous indicator.
-#' @inheritParams prevedere.api.indicator_series
+#' @inheritParams prevedere_indicator_series
 #'
 #' @return Model results and metadata, as a list.
 #' @export
 #'
 #' @examples
 #' \dontrun{
-#' prevedere.api.correlation(endog_provider = "BLS", endog_provider_id = "CES3133231058",
+#' k = "1235467abcdefg"
+#'
+#' prevedere_correlation(key = k,endog_provider = "BLS", endog_provider_id = "CES3133231058",
 #' exog_provider = "FRED", exog_provider_id = "PCU332313332313", freq = "Monthly",
 #' calculation = "ThreePeriodMoving")
 #' }
-prevedere.api.correlation <- function(endog_provider,
+prevedere_correlation <- function(key,endog_provider,
                                       endog_provider_id,
                                       exog_provider,
                                       exog_provider_id,
@@ -37,7 +39,7 @@ prevedere.api.correlation <- function(endog_provider,
 
   path <- paste("/correlation",endog_provider,endog_provider_id,exog_provider,exog_provider_id,freq,calculation,sep = "/")
 
-  fit <- prevedere.api.fetch(path)
+  fit <- prevedere_fetch(key,path)
 
   if(raw) return(fit)
 
@@ -67,7 +69,7 @@ prevedere.api.correlation <- function(endog_provider,
 #' @param model_id UUID for the forecast model.
 #' @param exclude_indicators Whether to return only indicators used in model, or all associated indicators.
 #' @param as_of_date Get the model only using data up to the specified date (YYYY-MM-DD). Used for backtesting.
-#' @inheritParams prevedere.api.indicator_series
+#' @inheritParams prevedere_indicator_series
 #'
 #' @return A list of model components and metadata, including indicators,
 #' coefficients, and the model start date.
@@ -75,12 +77,14 @@ prevedere.api.correlation <- function(endog_provider,
 #'
 #' @examples
 #' \dontrun{
-#' prevedere.api.raw_model(model_id = "1b1878399833c7f38b094e54dd43d374")
+#' k = "1235467abcdefg"
+#'
+#' prevedere_raw_model(key = k, model_id = "1b1878399833c7f38b094e54dd43d374")
 #'
 #' ## Backtest
-#' prevedere.api.raw_model(model_id = "1b1878399833c7f38b094e54dd43d374",as_of_data = "2019-05-01")
+#' prevedere_raw_model(key = k, model_id = "1b1878399833c7f38b094e54dd43d374",as_of_data = "2019-05-01")
 #' }
-prevedere.api.raw_model <- function(model_id,exclude_indicators = TRUE,as_of_date = NULL,raw = FALSE) {
+prevedere_raw_model <- function(key,model_id,exclude_indicators = TRUE,as_of_date = NULL,raw = FALSE) {
 
   if(!is.logical(exclude_indicators)) stop("'exclude_indicators' must be logical.")
 
@@ -94,7 +98,7 @@ prevedere.api.raw_model <- function(model_id,exclude_indicators = TRUE,as_of_dat
   payload <- list(ExcludeIndicators = exclude_indicators,
                   AsOfDate = as_of_date)
 
-  fit <- prevedere.api.fetch(path,payload)
+  fit <- prevedere_fetch(key,path,payload)
 
   if(raw) return(fit)
 
@@ -134,16 +138,18 @@ prevedere.api.raw_model <- function(model_id,exclude_indicators = TRUE,as_of_dat
 #'
 #' Returns historical fit and forecasted values of a forecast model.
 #'
-#' @inheritParams prevedere.api.raw_model
+#' @inheritParams prevedere_raw_model
 #'
 #' @return A dataframe of forecasted values and metadata.
 #' @export
 #'
 #' @examples
 #' \dontrun{
-#' prevedere.api.forecast(model_id = "1b1878399833c7f38b094e54dd43d374")
+#' k = "1235467abcdefg"
+#'
+#' prevedere_forecast(key = k, model_id = "1b1878399833c7f38b094e54dd43d374")
 #' }
-prevedere.api.forecast <- function(model_id,as_of_date = NULL, raw = FALSE) {
+prevedere_forecast <- function(key,model_id,as_of_date = NULL, raw = FALSE) {
 
   if(!is.null(as_of_date)) {
     as_of_date <- as.Date(as_of_date)
@@ -154,7 +160,7 @@ prevedere.api.forecast <- function(model_id,as_of_date = NULL, raw = FALSE) {
 
   payload <- list(AsOfDate = as_of_date)
 
-  f <- prevedere.api.fetch(path,payload)
+  f <- prevedere_fetch(key,path,payload)
 
   if(raw) return(f)
 

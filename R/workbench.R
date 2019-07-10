@@ -3,6 +3,7 @@
 #' Returns the indicators used in a workbench. Typically includes workbench
 #' metadata and associated indicator metadata.
 #'
+#' @inheritParams prevedere_fetch
 #' @param workbench_id UUID for workbench.
 #'
 #' @return A list of workbench metadata.
@@ -10,9 +11,11 @@
 #'
 #' @examples
 #' \dontrun{
-#' prevedere.api.workbench("b8da829f7a1d4509ca5125e4699d6f0e")
+#' k = "1235467abcdefg"
+#'
+#' prevedere_workbench(key = k, workbench_id = "b8da829f7a1d4509ca5125e4699d6f0e")
 #' }
-prevedere.api.workbench <- function(workbench_id) {
+prevedere_workbench <- function(key,workbench_id) {
   path <- paste("/workbench",workbench_id,sep = "/")
-  prevedere.api.fetch(path)
+  prevedere_fetch(key,path)
 }
