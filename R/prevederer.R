@@ -10,10 +10,8 @@
 #' \item Workbenches
 #' }
 #'
-#' Direct calls can also be made to the API using [prevedere.api.fetch].
+#' Direct calls can also be made to the API using [prevedere_fetch].
 #'
-#' **Note that access to the API requires an API key**. The API key is set in
-#' [options] using the convenience function [prevedere.api.set_key].
 #'
 #' @docType package
 "_PACKAGE"
