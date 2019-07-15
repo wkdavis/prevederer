@@ -16,7 +16,7 @@ an API key.
 # Installation
 
 ```{r install, eval = FALSE}
-devtools::install_github("wkdavis/prevederer")
+devtools::install_github("wkdavis/prevederer") 
 ```
 
 # Use
