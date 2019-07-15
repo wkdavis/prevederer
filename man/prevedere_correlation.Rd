@@ -12,12 +12,12 @@ prevedere_correlation(key, endog_provider, endog_provider_id,
 \item{key}{A Prevedere API key.}
 
 \item{endog_provider}{Code for the data provider of the endogenous indicator,
-can be hexidecimal or abbreviated name.}
+can be hexadecimal or abbreviated name.}
 
 \item{endog_provider_id}{Specific ProviderID for the endogenous indicator.}
 
-\item{exog_provider}{Code for the data provider of the exogneous indicator,
-can be hexidecimal or abbreviated name.}
+\item{exog_provider}{Code for the data provider of the exogenous indicator,
+can be hexadecimal or abbreviated name.}
 
 \item{exog_provider_id}{Specific ProviderID for the exogenous indicator.}
 

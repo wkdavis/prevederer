@@ -3,7 +3,7 @@
 #' Access indicator data and metadata.
 #'
 #' @param key A Prevedere API key.
-#' @param provider Code for a data provider, can be hexidecimal or abbreviated
+#' @param provider Code for a data provider, can be hexadecimal or abbreviated
 #' name.
 #' @param provider_id Specific ProviderID for the indicator.
 #' @param freq Frequency of indicator to retrieve. For a list of supported
@@ -135,10 +135,10 @@ prevedere_indicator_series <- function(key,
 #' endogenous and exogenous indicator.
 #'
 #' @param endog_provider Code for the data provider of the endogenous indicator,
-#' can be hexidecimal or abbreviated name.
+#' can be hexadecimal or abbreviated name.
 #' @param endog_provider_id Specific ProviderID for the endogenous indicator.
-#' @param exog_provider Code for the data provider of the exogneous indicator,
-#' can be hexidecimal or abbreviated name.
+#' @param exog_provider Code for the data provider of the exogenous indicator,
+#' can be hexadecimal or abbreviated name.
 #' @param exog_provider_id Specific ProviderID for the exogenous indicator.
 #' @inheritParams prevedere_indicator_series
 #'
@@ -156,7 +156,8 @@ prevedere_indicator_series <- function(key,
 #'   calculation = "ThreePeriodMoving"
 #' )
 #' }
-prevedere_correlation <- function(key, endog_provider,
+prevedere_correlation <- function(key,
+                                  endog_provider,
                                   endog_provider_id,
                                   exog_provider,
                                   exog_provider_id,

@@ -15,7 +15,7 @@ prevedere_indicator_series(key, provider, provider_id,
 \arguments{
 \item{key}{A Prevedere API key.}
 
-\item{provider}{Code for a data provider, can be hexidecimal or abbreviated
+\item{provider}{Code for a data provider, can be hexadecimal or abbreviated
 name.}
 
 \item{provider_id}{Specific ProviderID for the indicator.}
