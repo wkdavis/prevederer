@@ -1,6 +1,6 @@
 Package: prevederer
 Type: Package
-Title: R wrapper for the Prevedere API
+Title: R Wrapper for the Prevedere API
 Version: 0.0.0.9000
 Authors@R: person("Wil","Davis",,"davis.3243@osu.edu",role=c("aut","cre"),comment = c(ORCID = "0000-0001-9780-2576"))
 Description: Easy and efficient access to the Prevedere API for R users.
