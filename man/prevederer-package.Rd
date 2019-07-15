@@ -23,14 +23,20 @@ Direct calls can also be made to the API using \code{\link[=prevedere_fetch]{pre
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://www.prevedere.com/}
   \item \url{https://github.com/wkdavis/prevederer}
   \item \url{https://api.prevedere.com/index.html}
+  \item \url{https://www.prevedere.com/}
   \item Report bugs at \url{https://github.com/wkdavis/prevederer/issues}
 }
 
 }
 \author{
 \strong{Maintainer}: Wil Davis \email{davis.3243@osu.edu} (0000-0001-9780-2576)
+
+Other contributors:
+\itemize{
+  \item Hiram Foster \email{hiramfoster.co@gmail.com} [contributor]
+  \item Ted Dickinson \email{tmdickinson@gmail.com} [contributor]
+}
 
 }
