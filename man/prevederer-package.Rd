@@ -8,25 +8,24 @@
 \description{
 prevederer provides an R wrapper around the
 \href{https://www.prevedere.com/}{Prevedere Software} API. The package facilitates
-access to the main API components, including:
+access to the main \href{https://api.prevedere.com/index.html}{API components}, including:
 }
 \details{
 \itemize{
-\item Indicators
-\item Models (correlations, raw models, and forecasts)
-\item Workbenches
+\item Enumeration (lists of acceptable values)
+\item Indicator
+\item ForecastModel
+\item Workbench
 }
 
-Direct calls can also be made to the API using \link{prevedere.api.fetch}.
-
-\strong{Note that access to the API requires an API key}. The API key is set in
-\link{options} using the convenience function \link{prevedere.api.set_key}.
+Direct calls can also be made to the API using \code{\link[=prevedere_fetch]{prevedere_fetch()}}.
 }
 \seealso{
 Useful links:
 \itemize{
   \item \url{https://www.prevedere.com/}
   \item \url{https://github.com/wkdavis/prevederer}
+  \item \url{https://api.prevedere.com/index.html}
   \item Report bugs at \url{https://github.com/wkdavis/prevederer/issues}
 }
 
