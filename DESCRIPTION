@@ -19,7 +19,6 @@ Suggests:
     testthat (>= 2.1.0),
     knitr,
     covr
-VignetteBuilder: knitr
 Encoding: UTF-8
 LazyData: yes
 Roxygen: list(markdown = TRUE, roclets = c("rd", "namespace", "collate"))
