@@ -1,7 +1,12 @@
 ## Resubmission
 This is a resubmission. In this version I have:
 
-* Removed VignetteBuilder because there are no vignettes at this time.
+* Updated the title and description to remove the redundant "R".
+* Added single quotes to 'Prevedere' in the title and description.
+* Added a URL for 'Prevedere' in the description.
+* Added additional information about 'Prevedere' and the package functionality 
+to the description.
+* All functions require an API key, so all examples remain inside \dontrun{}.
 
 ## Test environments
 * local OS X install, R 3.6.0
