@@ -1,7 +1,7 @@
 Package: prevederer
 Type: Package
 Title: Wrapper for the 'Prevedere' API
-Version: 0.0.1
+Version: 0.0.1.9000
 Authors@R: c(
     person("Wil","Davis",,"davis.3243@osu.edu",role=c("aut","cre"),comment = c(ORCID = "0000-0001-9780-2576")),
     person("Hiram","Foster",,"hiramfoster.co@gmail.com",role=c("ctb")),
