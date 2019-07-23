@@ -11,6 +11,8 @@ knitr::opts_chunk$set(
 )
 ```
 
+# prevederer
+
 <!-- badges: start -->
 [![CRAN status](https://www.r-pkg.org/badges/version/prevederer)](https://cran.r-project.org/package=prevederer)
 [![Travis build status](https://travis-ci.org/wkdavis/prevederer.svg?branch=master)](https://travis-ci.org/wkdavis/prevederer)
@@ -18,19 +20,26 @@ knitr::opts_chunk$set(
 [![Codecov test coverage](https://codecov.io/gh/wkdavis/prevederer/branch/master/graph/badge.svg)](https://codecov.io/gh/wkdavis/prevederer?branch=master)
 <!-- badges: end -->
 
-# prevederer
-R package for accessing the Prevedere API. Access to the Prevedere API requires 
-an API key.
+## Overview
 
-# Installation
+prevederer is an R package for accessing the Prevedere API. Access to the 
+Prevedere API requires an API key.
 
-```{r install, eval = FALSE}
+## Installation
+
+```{r install-cran, eval = FALSE}
+install.packages("prevederer")
+```
+
+### Development version
+
+```{r install-dev, eval = FALSE}
 devtools::install_github("wkdavis/prevederer") 
 ```
 
-# Use
+## Usage
 
-## Endpoints
+### Endpoints
 - `indicator`: returns basic information about an indicator.
 - `indicator_series`: returns the data for an indicator.
 - `correlation`: calculates Pearson's r and other statistics at different offsets between an endogenous and exogenous indicator.
@@ -38,7 +47,7 @@ devtools::install_github("wkdavis/prevederer")
 - `forecast`: returns historical fit and forecasted values of a forecast model.
 - `workbench`: returns the indicators used in a workbench.
 
-## Example
+### Example
 ```{r example, eval = FALSE}
 library(prevederer)
 

@@ -1,6 +1,8 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
+# prevederer
+
 <!-- badges: start -->
 
 [![CRAN
@@ -13,20 +15,26 @@ status](https://ci.appveyor.com/api/projects/status/github/wkdavis/prevederer?br
 coverage](https://codecov.io/gh/wkdavis/prevederer/branch/master/graph/badge.svg)](https://codecov.io/gh/wkdavis/prevederer?branch=master)
 <!-- badges: end -->
 
-# prevederer
+## Overview
 
-R package for accessing the Prevedere API. Access to the Prevedere API
-requires an API key.
+prevederer is an R package for accessing the Prevedere API. Access to
+the Prevedere API requires an API key.
 
-# Installation
+## Installation
+
+``` r
+install.packages("prevederer")
+```
+
+### Development version
 
 ``` r
 devtools::install_github("wkdavis/prevederer") 
 ```
 
-# Use
+## Usage
 
-## Endpoints
+### Endpoints
 
   - `indicator`: returns basic information about an indicator.
   - `indicator_series`: returns the data for an indicator.
@@ -37,7 +45,7 @@ devtools::install_github("wkdavis/prevederer")
     forecast model.
   - `workbench`: returns the indicators used in a workbench.
 
-## Example
+### Example
 
 ``` r
 library(prevederer)
