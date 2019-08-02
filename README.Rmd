@@ -19,7 +19,6 @@ knitr::opts_chunk$set(
 [![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/wkdavis/prevederer?branch=master&svg=true)](https://ci.appveyor.com/project/wkdavis/prevederer)
 [![Codecov test coverage](https://codecov.io/gh/wkdavis/prevederer/branch/master/graph/badge.svg)](https://codecov.io/gh/wkdavis/prevederer?branch=master)
 [![CRAN RStudio mirror downloads](http://cranlogs.r-pkg.org/badges/prevederer)](http://www.r-pkg.org/pkg/prevederer)
-[![CRAN RStudio mirror downloads](http://cranlogs.r-pkg.org/badges/grand-total/prevederer)](http://www.r-pkg.org/pkg/prevederer)
 [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 [![Lifecycle - maturing](https://img.shields.io/badge/lifecycle-maturing-blue)](https://www.tidyverse.org/lifecycle/#maturing)
 ![CRAN/METACRAN](https://img.shields.io/cran/l/prevederer)

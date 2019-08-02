@@ -15,8 +15,6 @@ status](https://ci.appveyor.com/api/projects/status/github/wkdavis/prevederer?br
 coverage](https://codecov.io/gh/wkdavis/prevederer/branch/master/graph/badge.svg)](https://codecov.io/gh/wkdavis/prevederer?branch=master)
 [![CRAN RStudio mirror
 downloads](http://cranlogs.r-pkg.org/badges/prevederer)](http://www.r-pkg.org/pkg/prevederer)
-[![CRAN RStudio mirror
-downloads](http://cranlogs.r-pkg.org/badges/grand-total/prevederer)](http://www.r-pkg.org/pkg/prevederer)
 [![Project Status: Active – The project has reached a stable, usable
 state and is being actively
 developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
